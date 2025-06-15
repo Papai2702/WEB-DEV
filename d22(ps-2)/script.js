@@ -7,7 +7,7 @@ pr.forEach(function(value)  // array k har ek value k liye function run karega j
 }
 )
 
-// map : yeh ek naya array baata hai and us array mein har bar element leke aata ha jo map ke andar se return hoga.
+// map : yeh ek naya array banata hai and us array mein har bar element leke aata ha jo map ke andar se return hoga.
 let ar=[1,2,3,4]
 let ans=ar.map(function(value)
 {

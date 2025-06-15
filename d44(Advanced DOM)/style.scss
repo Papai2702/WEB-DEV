@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+html, body {
+    height: 100%;
+   width: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    justify-content: center;
+    align-items: center;
+#imgs{
+display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 43px;
+    border: 2px solid;
+    padding: 10px;
+
+}
+img{
+    height: 300px;
+    width: 500px;
+    object-fit: cover;
+}
+button{
+border-radius: 10px;
+padding: 5px 8px;
+background: rgb(40, 165, 206);
+font-size: 20px;
+font-weight: 567;
+}
+button:hover{
+    cursor: pointer;
+}
+button:active{
+    scale: 0.95;
+}
+
+#box,#box1,#box2{
+    height: 100px;
+    width: 100px;
+    background: rebeccapurple;
+}
+}
