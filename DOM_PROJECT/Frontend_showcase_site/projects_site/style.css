@@ -1,0 +1,514 @@
+@font-face {
+  font-family: "light";
+  src: url("/AeonikTRIAL-Light.otf");
+}
+@font-face {
+  font-family: "bold";
+  src: url("/AeonikTRIAL-Bold.otf");
+}
+@font-face {
+  font-family: "normal";
+  src: url("/AeonikTRIAL-Regular.otf");
+}
+:root {
+  --bg: #0f1a2c;
+  --card: #162235;
+  --text: #e6edf3;
+  --muted: #8b96a7;
+  --primary: #4c6ef5;
+  --blue_total:#4dabf7;
+  --green_comp:#37b24d;
+  --orange_pend:#f59f00;
+  --pink_prior:#e64980;
+  --radius: 12px;
+}
+
+body.light {
+  --bg: #f8f9fa;
+  --card: #ffffff;
+  --text: #1c2128;
+  --muted: #6c757d;
+  --primary: #4c6ef5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "normal";
+  color: rgba(222, 240, 255, 0.842);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #01001c;
+}
+body main {
+  height: 100%;
+  width: 100%;
+  padding: 3.5vw;
+  position: relative;
+}
+body main #feature {
+  padding: 2vw;
+  display: none;
+}
+body main #feature h1 {
+  font-family: "bold";
+  letter-spacing: 2px;
+  font-size: 14.5vw;
+  color: #49dfe2;
+}
+@media (min-width: 768px) {
+  body main #feature h1 {
+    font-size: 10vw;
+    letter-spacing: 5px;
+  }
+}
+@media (min-width: 1024px) {
+  body main #feature h1 {
+    font-size: 14.8vw;
+  }
+}
+body main #feature p {
+  font-family: "light";
+  color: rgba(243, 246, 210, 0.6745098039);
+  font-size: 4.5vw;
+  line-height: 1.6;
+}
+@media (min-width: 650px) {
+  body main #feature p {
+    font-size: 3vw;
+    line-height: 25px;
+  }
+}
+@media (min-width: 768px) {
+  body main #feature p {
+    line-height: 2.83vw;
+    letter-spacing: 2.83px;
+    font-family: "normal";
+  }
+}
+body main #feature h2 {
+  font-family: "normal";
+  color: #49dfe2;
+  line-height: 1.6;
+  margin-top: 2vw;
+}
+body main #feature #showcase {
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-self: center;
+  gap: 35px;
+}
+@media (min-width: 768px) {
+  body main #feature #showcase {
+    padding: 1.52vw;
+  }
+}
+body main #feature #showcase .proj {
+  padding: 35px;
+  width: 280px;
+  border: 2px solid antiquewhite;
+  background: url("https://i.pinimg.com/736x/43/5f/e7/435fe7242e1bb811729270b206b8e5fb.jpg");
+  border-radius: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+body main #feature #showcase .proj:active {
+  transform: scale(0.96);
+}
+body main #feature #showcase .proj .photo {
+  height: 260px;
+  width: 260px;
+  border: 1px solid rgba(222, 240, 255, 0.842);
+  border-radius: 12px;
+  transition: all ease linear 1s;
+  cursor: pointer;
+}
+body main #feature #showcase .proj .photo img {
+  box-shadow: 5px 5px 80px 8px #01001c;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+}
+body main #feature #showcase .proj .about {
+  width: 250px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.637);
+  backdrop-filter: blur(1px);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+body main #feature #showcase .proj .about h3 {
+  font-family: "normal";
+  color: #01001c;
+  opacity: 0.75;
+  font-size: 25.6px;
+  text-align: center;
+}
+body main #feature #showcase .proj .about p {
+  width: 100%;
+  color: #01001c;
+  font-size: 16px;
+  opacity: 0.4;
+  line-height: 14.5px;
+  text-align: center;
+  letter-spacing: 0;
+}
+body main .taskflow-section {
+  height: 100%;
+  padding: 24px;
+  width: 100%;
+  margin: 0 auto;
+  flex: 1 0 auto;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+body main .taskflow-section .main {
+  max-width: 60vw;
+  padding: 23px;
+  margin: auto;
+}
+body main .taskflow-section .main .top-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+}
+body main .taskflow-section .main .top-bar i {
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--text);
+}
+body main .taskflow-section .main .top-bar .brand {
+  font-size: 20px;
+  font-weight: 600;
+}
+body main .taskflow-section .main .top-bar .datetime {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  text-align: right;
+  line-height: 1.1;
+}
+body main .taskflow-section .main .toggle-theme {
+  margin-left: 24px;
+  font-size: 18px;
+  cursor: pointer;
+}
+body main .taskflow-section .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+body main .taskflow-section .stats-grid .stat-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+body main .taskflow-section .stats-grid .stat-card .value {
+  font-size: 28px;
+  font-weight: 600;
+}
+body main .taskflow-section .stats-grid .stat-card .label {
+  font-size: 14px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+body main .taskflow-section .stats-grid .stat-card .label i {
+  font-size: 15px;
+}
+body main .taskflow-section .stats-grid .total .value,
+body main .taskflow-section .stats-grid .total .label {
+  color: var(--blue_total);
+}
+body main .taskflow-section .stats-grid .completed .value,
+body main .taskflow-section .stats-grid .completed .label {
+  color: var(--green_comp);
+}
+body main .taskflow-section .stats-grid .pending .value,
+body main .taskflow-section .stats-grid .pending .label {
+  color: var(--orange_pend);
+}
+body main .taskflow-section .stats-grid .high .value,
+body main .taskflow-section .stats-grid .high .label {
+  color: var(--pink_prior);
+}
+body main .progress-block {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-top: 24px;
+}
+body main .progress-block .progress-title {
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+body main .progress-block .progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #1c2a3e;
+  border-radius: 99px;
+  overflow: hidden;
+}
+body main .progress-block .progress-bar .progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--primary);
+  transition: width 0.2s;
+}
+body main .search-row {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+body main .search-row .search-box {
+  flex: 1 1 240px;
+  position: relative;
+}
+body main .search-row .search-box input {
+  width: 100%;
+  padding: 12px 42px 12px 40px;
+  background: var(--card);
+  border: 1px solid #1c2a3e;
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 14px;
+}
+body main .search-row .search-box i {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  font-size: 15px;
+}
+body main .search-row .filter-btn {
+  background: var(--card);
+  border: none;
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 14px;
+}
+body main .search-row .add-btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 0 24px;
+  border: none;
+  border-radius: var(--radius);
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+body main .search-row .add-btn:active {
+  scale: 0.95;
+}
+body main #input {
+  width: 310px;
+  padding: 12px;
+  box-shadow: 10px 10px 100px 6px rgba(0, 0, 0, 0.6078431373), -10px -10px 100px 6px rgba(0, 0, 0, 0.6078431373);
+  border-radius: 6.5px;
+  position: absolute;
+  z-index: 12;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  background: var(--card);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  display: none;
+}
+body main #input h1 {
+  border-bottom: 1px solid var(--muted);
+  padding: 6px;
+}
+body main #input h3 {
+  text-align: start;
+  letter-spacing: 3.2px;
+  font-weight: 400;
+  width: 100%;
+}
+body main #input textarea {
+  height: 80px;
+  width: 260px;
+  padding: 6.5px;
+  font-size: 14px;
+  font-weight: 600;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--muted);
+  border-radius: 2px;
+}
+body main #input input {
+  height: 30px;
+  width: 260px;
+  padding: 6.5px;
+  font-size: 14px;
+  font-weight: 600;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--muted);
+  border-radius: 2px;
+}
+body main #input #prior {
+  display: flex;
+  font-size: 12px;
+  width: 80%;
+  align-items: center;
+}
+body main #input #btns #b1 {
+  padding: 12px 20px;
+  border: 1px solid var(--muted);
+  border-radius: 12px;
+  font-weight: 567;
+  background: transparent;
+  color: var(--text);
+  margin: 8px;
+  transition: all ease 0.2s;
+}
+body main #input #btns #b1:active {
+  scale: 0.9;
+}
+body main #input #btns #b2 {
+  padding: 12px 20px;
+  border: 1px solid var(--muted);
+  border-radius: 12px;
+  font-weight: 567;
+  background: var(--primary);
+  color: var(--text);
+  margin: 8px;
+  transition: all ease 0.2s;
+}
+body main #input #btns #b2:active {
+  scale: 0.9;
+}
+body main .empty-state {
+  margin-top: 80px;
+  text-align: center;
+  opacity: 0.8;
+  display: none;
+}
+body main .empty-state i {
+  font-size: 56px;
+  margin-bottom: 20px;
+  color: var(--muted);
+}
+body main .empty-state h3 {
+  margin: 0 0 8px;
+  font-weight: 500;
+}
+body main .empty-state p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+body main .task_list {
+  height: 66vh;
+  width: 100%;
+  overflow: auto;
+  border: 2px solid var(--pink_prior);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  background: url("https://media.istockphoto.com/id/2159917172/photo/3d-architecture-building-abstract-white-background-empty-space-platform-3d-interior-white.webp?a=1&b=1&s=612x612&w=0&k=20&c=NElsJ3Tf8esaPnntu-X0X53G0dqPuwRbLBcjqWpmTBc=");
+  background-size: cover;
+  background-position: top left;
+}
+body main ::-webkit-scrollbar {
+  display: none;
+}
+body main .target_task {
+  background: rgba(255, 255, 255, 0.768627451);
+  width: 100%;
+  border: 0.15px solid var(--muted);
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body main .target_task .details {
+  mix-blend-mode: difference;
+}
+body main .target_task .details h3 {
+  font-size: 20px;
+}
+body main .target_task .details p {
+  font-size: 12px;
+  opacity: 0.49;
+  font-weight: 100;
+}
+body main .target_task .details #priority {
+  font-weight: 900;
+  font-size: 14px;
+  opacity: 0.68;
+  color: var(--blue_total);
+}
+body main .target_task .done {
+  margin: 5px;
+  background: var(--green_comp);
+  font-weight: 555;
+  color: var(--text);
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all linear 0.052s;
+}
+body main .target_task .done:active {
+  scale: 0.9;
+}
+body .full #back_btn {
+  background: transparent;
+  border: 1px solid;
+  padding: 5px 8px;
+  border-radius: 8px;
+  outline: 0;
+  color: var(--orange_pend);
+  font-size: 16px;
+  cursor: pointer;
+  margin: 4px;
+  transition: all ease 0.2s;
+}
+body .full #back_btn:active {
+  scale: 0.9;
+}/*# sourceMappingURL=style.css.map */

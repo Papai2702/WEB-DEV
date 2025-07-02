@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-k5Hg5FoP9Tv2M5L7tB3v6RtHRqCJgwXrUTe6Ya6kW0Ljq9YTIkXXGm0jm8nK6dj0pPug1z3x+Rt29k9yXppSwg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+  </head>
+  <body>
+    <main>
+      <nav></nav>
+      <!-- <section id="home">
+        <div id="sliders">
+            <div id="s1" class="slid"></div>
+            <div id="s2" class="slid"></div>
+            <div id="s3" class="slid"></div>
+            <div id="s4" class="slid"></div>
+            <div id="s5" class="slid"></div>
+        </div>
+    </section> -->
+      <section id="feature">
+        <h1>Featured Projects</h1>
+        <p>
+          Explore a selection of my most impactful frontend projects, showcasing
+          my skills in web development and UI/UX design.
+        </p>
+        <h2>All Projects</h2>
+        <div id="showcase"></div>
+      </section>
+
+      <!-- ------------------TASK MANAGER APP------------------ -->
+
+      <section class="taskflow-section full">
+        <div class="main">
+          <header class="top-bar">
+            <i class="fa-solid fa-bars" aria-label="menu"></i>
+            <span class="brand">TaskFlow</span>
+
+            <div class="datetime">
+              <span id="date">June 27, 2025</span>
+              <span id="time">9:03 PM</span>
+            </div>
+            <button id="back_btn">Close X</button>
+
+            <i
+              id="themeToggle"
+              class="fa-regular fa-sun toggle-theme"
+              aria-label="toggle theme"
+            ></i>
+          </header>
+          <!-- Stats -->
+          <div class="stats-grid">
+            <div class="stat-card total">
+              <span class="value" id="totalTasks">0</span>
+              <span class="label"
+                ><i class="fa-regular fa-circle"></i> Total Tasks</span
+              >
+            </div>
+            <div class="stat-card completed">
+              <span class="value" id="completedTasks">0</span>
+              <span class="label"
+                ><i class="fa-solid fa-check-circle"></i> Completed</span
+              >
+            </div>
+            <div class="stat-card pending">
+              <span class="value" id="pendingTasks">0</span>
+              <span class="label"
+                ><i class="fa-regular fa-clock"></i> Pending</span
+              >
+            </div>
+            <div class="stat-card high">
+              <span class="value" id="highTasks">0</span>
+              <span class="label"
+                ><i class="fa-solid fa-circle-exclamation"></i> High
+                Priority</span
+              >
+            </div>
+          </div>
+
+          <!-- Progress -->
+          <div class="progress-block">
+            <div class="progress-title">
+              <span>Progress</span>
+              <span id="progressPct">0%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+          </div>
+
+          <!-- Search / Filters / Add -->
+          <div class="search-row">
+            <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" placeholder="Search tasks…" id="searchInput" />
+            </div>
+
+            <button class="filter-btn">All Status</button>
+            <button class="filter-btn">All Priority</button>
+            <button class="filter-btn">All Categories</button>
+
+            <button class="add-btn">
+              <i class="fa-solid fa-plus"></i> Add Task
+            </button>
+          </div>
+
+          <!-- Input Card -->
+          <form id="input">
+            <h1>Add New Task</h1>
+
+            <h3>Title</h3>
+            <input type="text" name="Title" placeholder="Task title" />
+
+            <h3>Description</h3>
+            <textarea
+              name="Description"
+              placeholder="Write about the Task..."
+            ></textarea>
+
+            <h3>Priority</h3>
+            <div id="prior">
+              <input type="radio" name="priority" />Low
+              <input type="radio" name="priority" />Mid
+              <input type="radio" name="priority" />High
+            </div>
+
+            <h3>Due Date</h3>
+            <input type="date" name="date" />
+
+            <h3>Due Time</h3>
+            <input type="time" name="time" />
+
+            <div id="btns">
+              <button id="b1">Cancel</button>
+              <button id="b2">Add Task</button>
+            </div>
+          </form>
+
+          <!-- Empty state -->
+          <div class="empty-state" id="emptyState">
+            <i class="fa-regular fa-file-lines"></i>
+            <h3>No tasks found</h3>
+            <p>
+              There are no tasks matching your current filters. Try changing
+              your filters or add a new task.
+            </p>
+          </div>
+          <div class="task_list"></div>
+        </div>
+      </section>
+
+      <!-- <section class="full">
+        <h1>Lorem, ipsum dolor.</h1>
+        <button id="back_btn">Close X</button>
+      </section>
+      <section class="full">
+        <h1>Lorem, ipsum dolor.</h1>
+        <button id="back_btn">Close X</button>
+      </section>
+      <section class="full">
+        <h1>Lorem, ipsum dolor.</h1>
+        <button id="back_btn">Close X</button>
+      </section>
+      <section class="full">
+        <h1>Lorem, ipsum dolor.</h1>
+        <button id="back_btn">Close X</button>
+      </section>
+      <section class="full">
+        <h1>Lorem, ipsum dolor.</h1>
+        <button id="back_btn">Close X</button>
+      </section>
+      <section class="full">
+        <h1>Lorem, ipsum dolor.</h1>
+        <button id="back_btn">Close X</button>
+      </section>
+      <section class="full">
+        <h1>Lorem, ipsum dolor.</h1>
+        <button id="back_btn">Close X</button>
+      </section> -->
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

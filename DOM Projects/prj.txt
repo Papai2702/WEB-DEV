@@ -1,0 +1,5 @@
+1=> Add friend request feature with same button
+2=> Insta Like button
+3=> Custom Cursor
+4=> Multiple img hovering Animation
+5=> Insta Story Features

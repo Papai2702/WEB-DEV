@@ -1,0 +1,6 @@
+git status
+git add .
+git status
+git commit -m "msg"
+git remote set-url origin https://github.com/Papai2702/WEB-DEV.git
+git push -u origin main

@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: cyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #insta #screen {
+  height: 450px;
+  width: 300px;
+  background: white;
+  border: 3.2px solid red;
+  border-radius: 15px;
+  position: relative;
+}
+main #insta #screen #full-screen {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1058823529);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  display: none;
+}
+main #insta #screen #full-screen #loder {
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #insta #screen #full-screen #loder #bar {
+  height: 3.3px;
+  width: 80%;
+  background: #d1cfcf;
+  border-radius: 50px;
+}
+main #insta #screen #full-screen #loder #bar #prg {
+  height: 100%;
+  width: 0%;
+  border-radius: 5%;
+  background: rgb(255, 255, 255);
+}
+main #insta #screen #stories {
+  height: 85px;
+  border-bottom: 2px solid #dadadd;
+  padding: 12px;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+main #insta #screen #stories #s1 {
+  display: inline-block;
+  margin-right: 5px;
+  height: 65px;
+  width: 65px;
+  border: 2.35px solid red;
+  border-radius: 50%;
+  overflow: hidden;
+}
+main #insta #screen #stories #s1 img {
+  padding: 3.1px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+main #insta #screen #stories::-webkit-scrollbar {
+  display: none;
+}/*# sourceMappingURL=style.css.map */

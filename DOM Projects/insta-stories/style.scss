@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: cyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  #insta {
+    #screen {
+      height: 450px;
+      width: 300px;
+      background: white;
+      border: 3.2px solid red;
+      border-radius: 15px;
+      position: relative;
+      #full-screen {
+        height: 100%;
+        width: 100%;
+        background: #0000001b;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        display: none;
+        #loder{
+            height: 5%;
+            // background: rgba(1, 0, 0, 0.17);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            #bar{
+                height: 3.3px;
+                width: 80%;
+                background: #d1cfcf;
+                border-radius: 50px;
+                // border: 1px solid rgba(128, 128, 128, 0.923);
+                #prg{
+                    height: 100%;
+                    width: 0%;
+                    border-radius: 5%;
+                    background: rgb(255, 255, 255);
+                }
+            }
+        }
+      }
+      #stories {
+        height: 85px;
+        border-bottom: 2px solid #dadadd;
+        // display: inline-flex;
+        // white-space: nowrap;
+        // align-items: center;
+        padding: 12px;
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+        #s1 {
+          display: inline-block;
+          margin-right: 5px;
+          height: 65px;
+          width: 65px;
+          border: 2.35px solid red;
+          border-radius: 50%;
+          overflow: hidden;
+          img {
+            padding: 3.1px;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+          }
+        }
+      }
+      #stories::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}

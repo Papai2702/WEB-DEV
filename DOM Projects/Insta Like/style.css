@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #box {
+  height: fit-content;
+  padding: 12px;
+  border: 1px solid;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 23px;
+}
+body #box img {
+  height: 200px;
+}
+body #box i {
+  letter-spacing: 5px;
+  font-style: italic;
+  font-weight: 100;
+  padding: 2px;
+  color: #000;
+}/*# sourceMappingURL=style.css.map */

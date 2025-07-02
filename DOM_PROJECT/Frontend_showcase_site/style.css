@@ -1,0 +1,230 @@
+@font-face {
+  font-family: light;
+  src: url(/AeonikTRIAL-Light.otf);
+}
+@font-face {
+  font-family: bold;
+  src: url(/AeonikTRIAL-Bold.otf);
+}
+@font-face {
+  font-family: normal;
+  src: url(/AeonikTRIAL-Regular.otf);
+}
+:root {
+  --pre: #01001c;
+  --sec: #0577cee3;
+  --tri: #49dfe2;
+  --qua: #f3f6d2ac;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: normal;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: var(--pre);
+  color: var(--qua);
+}
+body #title {
+  border: 2px solid red;
+  padding: 12px;
+  color: var(--tri);
+  letter-spacing: 3.2px;
+}
+body main {
+  height: 100%;
+  width: 100%;
+  padding: 2vw;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+body main #left {
+  border: 1px solid white;
+  border-radius: 23px;
+  box-shadow: var(--qua);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13.5vw;
+}
+body main #left #motivation h2 {
+  font-family: bold;
+  font-size: 12.3vw;
+  letter-spacing: 2.4px;
+}
+@media (min-width: 499px) {
+  body main #left #motivation h2 {
+    font-size: 10vw;
+  }
+}
+@media (min-width: 768px) {
+  body main #left #motivation h2 {
+    font-size: 5vw;
+  }
+}
+body main #left #motivation p {
+  text-align: end;
+  padding: 2.1vw;
+}
+@media (min-width: 768px) {
+  body main #left {
+    width: 35%;
+  }
+}
+body main #right {
+  width: 100vw;
+  border: 1px solid white;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2vw;
+}
+@media (min-width: 768px) {
+  body main #right {
+    width: 55%;
+    border-radius: 23px;
+  }
+}
+@media (min-width: 768px) {
+  body main #right {
+    padding: 1vw;
+    gap: 1.5vw;
+  }
+}
+body main #right #top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2vw;
+}
+@media (min-width: 768px) {
+  body main #right #top {
+    padding: 0.68vw;
+  }
+}
+body main #right #top #date {
+  height: 80px;
+  width: 80px;
+  background: var(--qua);
+  border-radius: 50%;
+}
+body main #right #top button {
+  background: var(--pre);
+  color: var(--tri);
+  padding: 3.1vw;
+  border: 1px solid var(--qua);
+  border-radius: 13px;
+  font-size: 16px;
+}
+@media (min-width: 499px) {
+  body main #right #top button {
+    font-size: 20px;
+    padding: 2vw;
+  }
+}
+@media (min-width: 768px) {
+  body main #right #top button {
+    font-size: 2vw;
+    padding: 1.5vw;
+  }
+}
+@media (min-width: 1024px) {
+  body main #right #top button {
+    font-size: 1.14vw;
+    padding: 1vw;
+  }
+}
+body main #right #tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 2px solid lightsalmon;
+}
+body main #right .task {
+  border: 1px solid var(--sec);
+  border-radius: 15px;
+  padding: 3vw;
+  font-size: 6.5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 499px) {
+  body main #right .task {
+    font-size: 5vw;
+  }
+}
+@media (min-width: 768px) {
+  body main #right .task {
+    font-size: 2.63vw;
+    padding: 1.58vw;
+  }
+}
+@media (min-width: 1024px) {
+  body main #right .task {
+    font-size: 1.82vw;
+    padding: 0.61vw;
+  }
+}
+body main #right .task span {
+  border: 1px solid var(--tri);
+  border-radius: 50%;
+  font-size: 4vw;
+  padding: 1vw;
+}
+@media (min-width: 499px) {
+  body main #right .task span {
+    font-size: 3vw;
+  }
+}
+@media (min-width: 768px) {
+  body main #right .task span {
+    font-size: 2vw;
+  }
+}
+@media (min-width: 1024px) {
+  body main #right .task span {
+    font-size: 1.2vw;
+  }
+}
+body main #right button {
+  background: var(--qua);
+  color: var(--sec);
+  padding: 2vw;
+  font-family: bold;
+  border-radius: 15px;
+  font-size: 4.5vw;
+}
+@media (min-width: 499px) {
+  body main #right button {
+    font-size: 3.8vw;
+  }
+}
+@media (min-width: 768px) {
+  body main #right button {
+    font-size: 2.53vw;
+    padding: 1vw;
+  }
+}
+@media (min-width: 1024px) {
+  body main #right button {
+    font-size: 1.78vw;
+  }
+}
+
+/* Grey-out and strike through completed items */
+.task.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}/*# sourceMappingURL=style.css.map */
